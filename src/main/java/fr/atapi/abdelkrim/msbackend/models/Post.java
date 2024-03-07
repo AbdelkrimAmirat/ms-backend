@@ -1,5 +1,6 @@
 package fr.atapi.abdelkrim.msbackend.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,6 +28,8 @@ public class Post {
 
     @ManyToOne(fetch= FetchType.LAZY)  // TODO: KAM
     @JoinColumn(name="userId")
+    @JsonBackReference
+
     private User user;
 
     @Override

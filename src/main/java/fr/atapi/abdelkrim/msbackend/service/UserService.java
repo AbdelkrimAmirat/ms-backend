@@ -17,6 +17,10 @@ public class UserService {
     @Autowired
     private PostService postService;
 
+    public User saveUser(User user){
+        return userRepository.save(user);
+    }
+
     public List<User> getAllUsers(){
         return userRepository.findAll();
     }
@@ -25,12 +29,12 @@ public class UserService {
         return userRepository.findById(id).orElse(null);
     }
 
-    public List<Post> getPostsByUserId(Integer id){
-        return postService.getPostsByUserId(id);
+    public void deleteUserById(Integer id) {
+        userRepository.deleteById(id);
     }
 
-    public User saveUser(User user){
-        return userRepository.save(user);
+    public User getUserByEmailAndPassword(String email, String password) {
+        return userRepository.findByEmailAndPassword(email, password);
     }
 
 }

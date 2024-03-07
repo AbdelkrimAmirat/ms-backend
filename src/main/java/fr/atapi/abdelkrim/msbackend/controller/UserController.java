@@ -13,10 +13,8 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    UserRepository userRepository;
-
-    @Autowired
     UserService userService;
+
     @GetMapping("get-all-users")
     public List<User> getAllUsers(){
         return userService.getAllUsers();
@@ -26,10 +24,19 @@ public class UserController {
     public User getUserById(@PathVariable Integer toto) {
         return userService.getUserById(toto);
     }
-
     @PostMapping("save-user")
     public User saveUser(@RequestBody User user) {
         return userService.saveUser(user);
+    }
+
+    @PostMapping("delete-user-by-id/{toto}")
+    public void deleteUserById(@PathVariable Integer toto) {
+        userService.deleteUserById(toto);
+    }
+
+    @GetMapping("login")
+    public User login(@RequestParam String email, @RequestParam String password) {
+        return userService.getUserByEmailAndPassword(email, password);
     }
 
 }

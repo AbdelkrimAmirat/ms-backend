@@ -4,7 +4,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/amiratdb?allowPublicKeyRetrieval=true&useSSL=false
     username: root
-    password: Khaled.95
+    password: Khaled. 95
     hikari:
       initialization-fail-timeout: 0
   jpa:

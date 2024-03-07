@@ -1,0 +1,11 @@
+fr\atapi\abdelkrim\msbackend\models\UserDTO.class
+fr\atapi\abdelkrim\msbackend\service\PostService.class
+fr\atapi\abdelkrim\msbackend\MsBackendApplication.class
+fr\atapi\abdelkrim\msbackend\controller\PostController.class
+fr\atapi\abdelkrim\msbackend\service\UserService.class
+fr\atapi\abdelkrim\msbackend\repository\UserRepository.class
+fr\atapi\abdelkrim\msbackend\models\PostDTO.class
+fr\atapi\abdelkrim\msbackend\models\User.class
+fr\atapi\abdelkrim\msbackend\models\Post.class
+fr\atapi\abdelkrim\msbackend\controller\UserController.class
+fr\atapi\abdelkrim\msbackend\repository\PostRepository.class
