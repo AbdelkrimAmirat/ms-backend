@@ -19,7 +19,6 @@ public class PostController {
 
     @PostMapping("save-post")
     public Post savePost(@RequestBody PostDTO postDto) {
-
         System.out.println(postDto);
         return postService.savePost(postDto);
     }
@@ -39,6 +38,9 @@ public class PostController {
         postService.deletePostById(id);
     }
 
-
+    @GetMapping("get-post-by-id/{postId}")
+    public Post getPostById(@PathVariable Integer postId){
+        return postService.getPostById(postId);
+    }
 
 }

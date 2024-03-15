@@ -44,4 +44,7 @@ public class PostService {
     public void deletePostById(Integer id) {
         postRepository.deleteById(id);
     }
+
+    public Post getPostById(Integer postId){ return postRepository.findById(postId).orElse(null);
+    }
 }

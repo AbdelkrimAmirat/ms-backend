@@ -32,6 +32,9 @@ public class User {
     @Column
     private String password;
 
+    @Column
+    private String role;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference
     private Set<Post> posts = new HashSet<>();
